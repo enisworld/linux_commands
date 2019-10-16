@@ -12,16 +12,16 @@
         netstat -patn | grep "spesific_port_number"
    
    
-   Açık Portları Görüntüleme:
+   Viewing Open Ports:
 
 netstat -tap                  <- this command returns list of opening ports.
 
 
 netstat -l -listening         <- this command lists the listened socket information on the system
-netstat -p -Programs          <- Soket bilgilerinin süreçleri ve kullandığı program bilgilerini getirir.
-netstat -t -tcp               <- tcp protokolüne ilişkin port bilgilerini listeler.
-netstat -u -upd               <- upd protokolüne ilişkin port bilgilerini listeler.
-netstat -n -numeric           <- Listelenen ip adres bilgileri için isim çözme işlemi gerçekleşmeden listeme yapar.
+netstat -p -Programs          <- this command brings processes of socket information
+netstat -t -tcp               <- Lists the port information for the tcp protocol.
+netstat -u -udp               <- Lists the port information for the udp protocol.
+netstat -n -numeric           <- 
         
         
 - For a list of programs that use all TCP / IP connections and the TCP / IP sockets they have opened:     
@@ -51,4 +51,15 @@ Closing port on Linux:
 
             UDP
                   iptables -A OUTPUT -p tcp --dport portno -j REJECT
+                  
+                  
+Open and listening ports:
+
+      netstat -lntu           <- udp
+
+list port and services:
+
+      cat /etc/services
+
+
       
