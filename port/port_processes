@@ -1,0 +1,20 @@
+- to find if any port is open:
+
+      nmap --open "ip_address"
+      
+ 
+ 
+-  to find programs which using ports:
+ 
+      netstat -patn
+      
+      * to spesific port number:
+        netstat -patn | grep "spesific_port_number"
+        
+        
+        
+- For a list of programs that use all TCP / IP connections and the TCP / IP sockets they have opened:     
+      
+      netstat -tap
+
+      
